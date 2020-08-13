@@ -2,17 +2,17 @@ from time import sleep
 
 
 def Escolha():
-    válido = False
-    while not válido:
+    valido = False
+    while not valido:
         entrada = str(input("Sua escolha: ")).strip()
         if entrada != '1' or entrada == '':
             if entrada != '2' or entrada == '':
                 print(f'\033[:31mERRO: \"{entrada}\" não é uma escolha válida!\033[m')
             else:
-                válido = True
+                valido = True
                 return int(entrada)
         else:
-            válido = True
+            valido = True
             return int(entrada)
 
 
@@ -29,7 +29,7 @@ def Protagonista(msg):
     print(f'\033[:33m{msg}\033[m')
 
 
-def Opções(msg1, msg2):
+def Opcoes(msg1, msg2):
     print('-' * 50)
     sleep(1)
     print('Perguntar:')
@@ -49,7 +49,7 @@ Vou te contar o por quê está aqui.
 Mas depois, precisamos nos esconder!''')
     sleep(2)
     Ajudante('Pronto! Estamos bem, alguma dúvida?')
-    Opções('Como vim parar aqui!', 'Do que nós estamos fugindo?')
+    Opcoes('Como vim parar aqui!', 'Do que nós estamos fugindo?')
     if Escolha() == 1:
         Ajudante('Você foi enviado pra nos Ajudar')
     else:
